@@ -1,15 +1,12 @@
-<h1>Listing hotels</h1>
- 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Stars</th>
-  </tr>
- 
-  <% @hotels.each do |hotel| %>
-    <tr>
-      <td><%= hotel.name %></td>
-      <td><%= hotel.stars %></td>
-    </tr>
-  <% end %>
-</table>
+<h1>Hello</h1>
+
+<div id="search">
+	<%= form_tag hotels_path, :method => 'get' do %>
+	    	<%= text_field_tag :search, params[:search], :class => "span4", :placeholder => "City or Hotel", :required => true %>				
+		<!--<i class="mini-ico-calendar"></i>-->
+			<%= text_field_tag :check_in, params[:check_in], :class => "span2", :placeholder => "Check-in",  :id => "search-check-in", :required => true %>
+			<%= text_field_tag :check_out, params[:check_out], :class => "span2", :placeholder => "Check-out",  :id => "search-check-out", :required => true %>
+			<% select_tag :guests, options_for_select((1..30).to_a.map{|s| ["#{s}", s]}), :class => "span2", :prompt => "Guests ", :include_blank => false, :id => "search-pax", :required => true %>
+	    	<%= submit_tag "Search", :name => nil, :class => "btn btn-large btn-primary span2", :id => "btn-search"%>
+	<% end %>	
+</div>

@@ -13,4 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.ui.datepicker
+//= require jquery.ui.tabs
+//= require jquery.ui.slider
 //= require_tree .
+
+$(document).ready(function(){
+	//Datepickers for the search
+	$("#search-check-in").datepicker({
+		minDate: 0
+	});
+	$("#search-check-out").datepicker({
+		minDate: 0
+	});
+	//Tabs for My Bookings - My Profile
+	$( "#tabs" ).tabs();
+});

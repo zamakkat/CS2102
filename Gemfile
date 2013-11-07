@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'jquery-ui-rails'
 
 ########### Heroku
 gem 'rails_12factor', group: :production
