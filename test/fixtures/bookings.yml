@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bid: 1
+  startdate: 2013-11-07
+  enddate: 2013-11-07
+
+two:
+  bid: 1
+  startdate: 2013-11-07
+  enddate: 2013-11-07
