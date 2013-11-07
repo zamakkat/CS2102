@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107070336) do
+ActiveRecord::Schema.define(version: 20131107094659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 20131107070336) do
     t.string   "type"
     t.integer  "beds"
     t.boolean  "smoking"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "service_packages", force: true do |t|
+    t.string   "sid"
+    t.string   "pid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
