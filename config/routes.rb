@@ -1,12 +1,15 @@
 CS2102::Application.routes.draw do
-  resources :services
 
+  root :to => 'home#index', :as => :home
+  
   resources :bookings
 
   resources :customers
 
   resources :packages
 
+
+  resources :services
   resources :rooms
 
   resources :hotels

@@ -1,0 +1,15 @@
+<h1>Listing hotels</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Stars</th>
+  </tr>
+ 
+  <% @hotels.each do |hotel| %>
+    <tr>
+      <td><%= hotel.name %></td>
+      <td><%= hotel.stars %></td>
+    </tr>
+  <% end %>
+</table>
