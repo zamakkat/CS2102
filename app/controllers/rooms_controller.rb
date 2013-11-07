@@ -24,8 +24,8 @@ class RoomsController < ApplicationController
   # POST /rooms
   # POST /rooms.json
   def create
-    @room = Room.new(room_params)
-
+    @hotel = Hotel.find(params[:hotel_id])
+    @room = @hotel.rooms.create(room_params)
     respond_to do |format|
       if @room.save
         format.html { redirect_to @room, notice: 'Room was successfully created.' }
@@ -35,6 +35,7 @@ class RoomsController < ApplicationController
         format.json { render json: @room.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to post_path(@hotel)
   end
 
   # PATCH/PUT /rooms/1

@@ -31,37 +31,10 @@
 </p>
 
 <p>
-  <strong>Descrpition:</strong>
+  <strong>Description:</strong>
   <%= @hotel.descrpition %>
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Type</th>
-      <th>Beds</th>
-      <th>Smoking</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.number %></td>
-        <td><%= room.type %></td>
-        <td><%= room.beds %></td>
-        <td><%= room.smoking %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <%= link_to 'Edit', edit_hotel_path(@hotel) %> |
 <%= link_to 'Back', hotels_path %>

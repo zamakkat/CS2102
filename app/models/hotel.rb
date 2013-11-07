@@ -1,6 +1,6 @@
 class Hotel < ActiveRecord::Base
   has_many :services, dependent: :destroy
-  has_many :rooms, dependent: :destroy
+  has_many :rooms, dependent: :destroy, :foreign_key => :hotel_id
   
   #attr_accessible :name, :stars, :city, :country, :address, :phone
   
